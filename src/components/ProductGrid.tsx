@@ -1,4 +1,10 @@
 import ProductCard from "./ProductCard";
+import brazilianStraightImg from "@/assets/brazilian-straight.jpg";
+import peruvianBodyWaveImg from "@/assets/peruvian-body-wave.jpg";
+import malaysianCurlyImg from "@/assets/malaysian-curly.jpg";
+import indianDeepWaveImg from "@/assets/indian-deep-wave.jpg";
+import cambodianStraightImg from "@/assets/cambodian-straight.jpg";
+import vietnameseLooseWaveImg from "@/assets/vietnamese-loose-wave.jpg";
 
 const ProductGrid = () => {
   const products = [
@@ -7,7 +13,7 @@ const ProductGrid = () => {
       name: "Brazilian Straight Hair Bundle",
       price: 189,
       originalPrice: 249,
-      image: "/api/placeholder/400/300",
+      image: brazilianStraightImg,
       rating: 5,
       reviews: 127,
       description: "Premium 100% virgin Brazilian hair, straight texture, available in multiple lengths."
@@ -17,7 +23,7 @@ const ProductGrid = () => {
       name: "Peruvian Body Wave Hair",
       price: 199,
       originalPrice: 259,
-      image: "/api/placeholder/400/300",
+      image: peruvianBodyWaveImg,
       rating: 5,
       reviews: 89,
       description: "Luxurious body wave texture with natural movement and bounce."
@@ -26,7 +32,7 @@ const ProductGrid = () => {
       id: 3,
       name: "Malaysian Curly Hair Bundle",
       price: 219,
-      image: "/api/placeholder/400/300",
+      image: malaysianCurlyImg,
       rating: 4,
       reviews: 156,
       description: "Beautiful curly texture that maintains its pattern through multiple washes."
@@ -36,7 +42,7 @@ const ProductGrid = () => {
       name: "Indian Deep Wave Hair",
       price: 179,
       originalPrice: 229,
-      image: "/api/placeholder/400/300",
+      image: indianDeepWaveImg,
       rating: 5,
       reviews: 203,
       description: "Deep wave pattern with natural shine and incredible volume."
@@ -45,7 +51,7 @@ const ProductGrid = () => {
       id: 5,
       name: "Cambodian Straight Hair",
       price: 209,
-      image: "/api/placeholder/400/300",
+      image: cambodianStraightImg,
       rating: 5,
       reviews: 67,
       description: "Silky straight hair with natural movement and long-lasting quality."
@@ -55,7 +61,7 @@ const ProductGrid = () => {
       name: "Vietnamese Loose Wave",
       price: 189,
       originalPrice: 239,
-      image: "/api/placeholder/400/300",
+      image: vietnameseLooseWaveImg,
       rating: 4,
       reviews: 112,
       description: "Loose wave pattern perfect for everyday styling with natural flow."
