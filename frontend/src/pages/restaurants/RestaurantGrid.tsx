@@ -1,8 +1,8 @@
 import RestaurantCard from "./RestaurantCard";
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
-import { useState } from "react";
-import { foods } from "@/data/foods";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import pizzaImg from "@/assets/pizza-restaurant.jpg";
 import asianImg from "@/assets/asian-restaurant.jpg";
 import burgerImg from "@/assets/burger-restaurant.jpg";
@@ -14,6 +14,19 @@ interface FoodGridProps {
 
 const FoodGrid = ({ filter = 'all' }: FoodGridProps) => {
   const [searchTerm, setSearchTerm] = useState("");
+  const [foods, setFoods] = useState([]);
+
+  useEffect(() => {
+    const fetchFoods = async () => {
+      try {
+        const response = await axios.get('http://localhost:8000/api/foods');
+        setFoods(response.data);
+      } catch (error) {
+        console.error('Error fetching foods:', error);
+      }
+    };
+    fetchFoods();
+  }, []);
 
   // Get unique restaurants
   const restaurants = Array.from(new Set(foods.map(food => food.restaurant))).map(restaurantName => {
