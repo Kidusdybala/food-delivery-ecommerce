@@ -20,14 +20,7 @@ const FoodHero = () => {
       <div className="container relative z-10">
         <div className="max-w-2xl text-white">
           <div className="flex items-center gap-2 mb-4">
-            <div className="flex items-center gap-1">
-              <Star className="h-5 w-5 fill-secondary text-secondary" />
-              <Star className="h-5 w-5 fill-secondary text-secondary" />
-              <Star className="h-5 w-5 fill-secondary text-secondary" />
-              <Star className="h-5 w-5 fill-secondary text-secondary" />
-              <Star className="h-5 w-5 fill-secondary text-secondary" />
-            </div>
-            <span className="text-white/90 font-medium">Rated #1 Food Delivery</span>
+            
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">

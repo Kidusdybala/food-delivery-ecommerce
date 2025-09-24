@@ -13,14 +13,7 @@ const FoodHeader = () => {
           </h1>
         </div>
 
-        {/* Location */}
-        <div className="hidden md:flex items-center space-x-2 text-muted-foreground">
-          <MapPin className="h-4 w-4 text-primary" />
-          <span className="text-sm">Deliver to</span>
-          <button className="text-foreground font-medium hover:text-primary transition-colors">
-            123 Main St, City
-          </button>
-        </div>
+
 
         {/* Navigation */}
         <nav className="hidden lg:flex items-center space-x-8">
