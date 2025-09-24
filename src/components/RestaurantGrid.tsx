@@ -13,7 +13,6 @@ import aynetImg from "/food and drinks/aynet.jpg";
 import nigusImg from "/food and drinks/nigus.jpg";
 import shiroImg from "/food and drinks/shiro.jpg";
 import cocaImg from "/food and drinks/coca cola.jpg";
-import fantaImg from "/food and drinks/fanta.jpg";
 import spriteImg from "/food and drinks/sprite.jpg";
 
 const FoodGrid = () => {
@@ -148,14 +147,6 @@ const FoodGrid = () => {
       description: "Classic Coca Cola soft drink."
     },
     {
-      id: 17,
-      name: "Fanta",
-      restaurant: "Various",
-      price: 2.49,
-      image: fantaImg,
-      description: "Orange flavored soft drink."
-    },
-    {
       id: 18,
       name: "Sprite",
       restaurant: "Various",
@@ -204,7 +195,7 @@ const FoodGrid = () => {
               deliveryTime="20-30 min" // Placeholder
               deliveryFee={0} // Placeholder
               image={food.image}
-              description={`${food.description} - $${food.price}`}
+              description={`${food.description} - ${food.price} ETB`}
             />
           ))}
         </div>
