@@ -22,7 +22,7 @@ const FoodGrid = () => {
       id: 1,
       name: "Margherita Pizza",
       restaurant: "Mario's Pizzeria",
-      price: 12.99,
+      price: 350,
       image: pizzaImg,
       description: "Classic pizza with tomato sauce, mozzarella, and fresh basil."
     },
@@ -30,7 +30,7 @@ const FoodGrid = () => {
       id: 2,
       name: "Pepperoni Pizza",
       restaurant: "Mario's Pizzeria",
-      price: 14.99,
+      price: 350,
       image: pizzaImg,
       description: "Pizza topped with pepperoni, cheese, and Italian herbs."
     },
@@ -38,7 +38,7 @@ const FoodGrid = () => {
       id: 3,
       name: "Classic Burger",
       restaurant: "Burger Palace",
-      price: 9.99,
+      price: 300,
       image: burgerImg,
       description: "Juicy beef patty with lettuce, tomato, and special sauce."
     },
@@ -46,7 +46,7 @@ const FoodGrid = () => {
       id: 4,
       name: "Cheese Burger",
       restaurant: "Burger Palace",
-      price: 10.99,
+      price: 350,
       image: burgerImg,
       description: "Classic burger with melted cheese and all the fixings."
     },
@@ -54,7 +54,7 @@ const FoodGrid = () => {
       id: 5,
       name: "Chicken Burger",
       restaurant: "Burger Hub",
-      price: 11.49,
+      price: 320,
       image: burgerImg,
       description: "Grilled chicken patty with fresh vegetables and mayo."
     },
@@ -62,7 +62,7 @@ const FoodGrid = () => {
       id: 6,
       name: "Veggie Burger",
       restaurant: "Burger Hub",
-      price: 10.49,
+      price: 280,
       image: burgerImg,
       description: "Plant-based patty with avocado, lettuce, and tomato."
     },
@@ -70,7 +70,7 @@ const FoodGrid = () => {
       id: 7,
       name: "Beef Burrito",
       restaurant: "Taco Fiesta",
-      price: 8.99,
+      price: 400,
       image: burgerImg,
       description: "Large burrito filled with seasoned beef, rice, and beans."
     },
@@ -78,7 +78,7 @@ const FoodGrid = () => {
       id: 8,
       name: "Chicken Burrito",
       restaurant: "Burrito Barn",
-      price: 9.49,
+      price: 380,
       image: burgerImg,
       description: "Burrito with grilled chicken, salsa, and cheese."
     },
@@ -86,7 +86,7 @@ const FoodGrid = () => {
       id: 9,
       name: "Doro Wat",
       restaurant: "Habesha Kitchen",
-      price: 16.99,
+      price: 500,
       image: doroImg,
       description: "Spicy Ethiopian chicken stew with berbere spice and injera."
     },
@@ -94,7 +94,7 @@ const FoodGrid = () => {
       id: 10,
       name: "Kitfo",
       restaurant: "Habesha Kitchen",
-      price: 18.99,
+      price: 600,
       image: kitfoImg,
       description: "Minced beef tartare seasoned with mitmita and served with injera."
     },
@@ -102,7 +102,7 @@ const FoodGrid = () => {
       id: 11,
       name: "Agelgil Tibs",
       restaurant: "Habesha Kitchen",
-      price: 15.99,
+      price: 450,
       image: agelgilImg,
       description: "Lamb cubes sautéed with onions, garlic, and rosemary."
     },
@@ -110,7 +110,7 @@ const FoodGrid = () => {
       id: 12,
       name: "Atakilt Wat",
       restaurant: "Habesha Kitchen",
-      price: 14.99,
+      price: 400,
       image: atakiltImg,
       description: "Mixed vegetable stew with cabbage, carrots, and potatoes."
     },
@@ -118,7 +118,7 @@ const FoodGrid = () => {
       id: 13,
       name: "Aynet Tibs",
       restaurant: "Habesha Kitchen",
-      price: 17.99,
+      price: 480,
       image: aynetImg,
       description: "Beef cubes cooked with onions, tomatoes, and green peppers."
     },
@@ -126,7 +126,7 @@ const FoodGrid = () => {
       id: 14,
       name: "Nigus Wat",
       restaurant: "Habesha Kitchen",
-      price: 16.49,
+      price: 400,
       image: nigusImg,
       description: "Lentil stew with berbere spice and served with injera."
     },
@@ -134,7 +134,7 @@ const FoodGrid = () => {
       id: 15,
       name: "Shiro Wat",
       restaurant: "Habesha Kitchen",
-      price: 13.99,
+      price: 320,
       image: shiroImg,
       description: "Chickpea flour stew with onions and berbere spice."
     },
@@ -142,7 +142,7 @@ const FoodGrid = () => {
       id: 16,
       name: "Coca Cola",
       restaurant: "Various",
-      price: 2.49,
+      price: 50,
       image: cocaImg,
       description: "Classic Coca Cola soft drink."
     },
@@ -150,7 +150,7 @@ const FoodGrid = () => {
       id: 18,
       name: "Sprite",
       restaurant: "Various",
-      price: 2.49,
+      price: 50,
       image: spriteImg,
       description: "Lemon-lime flavored soda."
     }
