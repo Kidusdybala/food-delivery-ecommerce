@@ -3,10 +3,6 @@ import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
 import { useState } from "react";
 import { foods } from "@/data/foods";
-import pizzaImg from "@/assets/pizza-restaurant.jpg";
-import asianImg from "@/assets/asian-restaurant.jpg";
-import burgerImg from "@/assets/burger-restaurant.jpg";
-import simpleBistroImg from "/food and drinks/simple bistro.jpg";
 
 interface FoodGridProps {
   filter?: string;
@@ -18,12 +14,12 @@ const FoodGrid = ({ filter = 'all' }: FoodGridProps) => {
   // Get unique restaurants
   const restaurants = Array.from(new Set(foods.map(food => food.restaurant))).map(restaurantName => {
     const restaurantFoods = foods.filter(food => food.restaurant === restaurantName);
-    let restaurantImage = pizzaImg; // default
-    if (restaurantName === 'Hilton') restaurantImage = pizzaImg;
-    else if (restaurantName === 'Simple Bistro') restaurantImage = simpleBistroImg;
-    else if (restaurantName === 'Amrogn Chicken') restaurantImage = burgerImg;
-    else if (restaurantName === 'Skylight') restaurantImage = asianImg;
-    else if (restaurantName === 'Fegegta') restaurantImage = burgerImg;
+    let restaurantImage = '/food and drinks/restorants/simple.jpg'; // default
+    if (restaurantName === 'Hilton') restaurantImage = '/food and drinks/restorants/hilton.webp';
+    else if (restaurantName === 'Simple Bistro') restaurantImage = '/food and drinks/restorants/simple.jpg';
+    else if (restaurantName === 'Amrogn Chicken') restaurantImage = '/food and drinks/restorants/amrogn chiken.png';
+    else if (restaurantName === 'Skylight') restaurantImage = '/food and drinks/restorants/dereje kurt.jpg';
+    else if (restaurantName === 'Fegegta') restaurantImage = '/food and drinks/restorants/fegegta burger.jpg';
     return {
       name: restaurantName,
       cuisine: 'Various',
