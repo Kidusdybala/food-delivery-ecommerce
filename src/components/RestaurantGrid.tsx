@@ -34,7 +34,11 @@ import tunaBurgerImg from "/food and drinks/tuna burger.jpg";
 import tunaSandwichImg from "/food and drinks/tuna sandwich.jpg";
 import ultimateDoubleBurgerImg from "/food and drinks/ultimate double burger.jpg";
 
-const FoodGrid = () => {
+interface FoodGridProps {
+  filter?: string;
+}
+
+const FoodGrid = ({ filter = 'all' }: FoodGridProps) => {
   const [searchTerm, setSearchTerm] = useState("");
   const foods = [
     // Dereje Kurt Bet - Ethiopian Meat & Injera Restaurant
@@ -442,47 +446,64 @@ const FoodGrid = () => {
       image: stuffedCrustPizzaImg,
       description: "Pizza with pepperoni, sausage, bell peppers, and onions."
     },
-    // Drinks from various restaurants
-    {
-      id: 51,
-      name: "Coca Cola",
-      restaurant: "Various",
-      price: 50,
-      image: cocaImg,
-      description: "Classic Coca Cola soft drink."
-    },
-    {
-      id: 52,
-      name: "Sprite",
-      restaurant: "Various",
-      price: 50,
-      image: spriteImg,
-      description: "Lemon-lime flavored soda."
-    }
+    // Note: Soft drinks are available as add-ons in food details
   ];
 
-  const filteredFoods = foods.filter(food =>
-    food.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    food.restaurant.toLowerCase().includes(searchTerm.toLowerCase())
+  // Get unique restaurants
+  const restaurants = Array.from(new Set(foods.map(food => food.restaurant))).map(restaurantName => {
+    const restaurantFoods = foods.filter(food => food.restaurant === restaurantName);
+    return {
+      name: restaurantName,
+      cuisine: restaurantFoods[0]?.description.split(' - ')[0] || 'Various',
+      rating: 4.5,
+      deliveryTime: '20-30 min',
+      deliveryFee: 0,
+      image: restaurantFoods[0]?.image || pizzaImg,
+      description: `${restaurantFoods.length} delicious items available`,
+      foods: restaurantFoods
+    };
+  });
+
+  const filteredFoods = foods.filter(food => {
+    // Search filter
+    const matchesSearch = food.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         food.restaurant.toLowerCase().includes(searchTerm.toLowerCase());
+
+    // Navbar filter
+    let matchesFilter = true;
+    if (filter === 'deals') {
+      // Show foods under 300 ETB as deals
+      matchesFilter = food.price < 300;
+    }
+
+    return matchesSearch && matchesFilter;
+  });
+
+  const filteredRestaurants = restaurants.filter(restaurant =>
+    restaurant.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
+  const isRestaurantView = filter === 'restaurants';
 
   return (
     <section className="py-20 bg-muted/20">
       <div className="container">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Popular Foods
+            {isRestaurantView ? 'Popular Restaurants' : 'Popular Foods'}
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-            Discover delicious foods from restaurants in Addis Ababa and get them
-            delivered fresh to your doorstep.
+            {isRestaurantView
+              ? 'Discover amazing restaurants in Addis Ababa and explore their menus.'
+              : 'Discover delicious foods from restaurants in Addis Ababa and get them delivered fresh to your doorstep.'
+            }
           </p>
 
           <div className="relative max-w-md mx-auto">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
             <Input
               type="text"
-              placeholder="Search for foods or restaurants..."
+              placeholder={`Search for ${isRestaurantView ? 'restaurants' : 'foods or restaurants'}...`}
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="pl-10"
@@ -491,18 +512,36 @@ const FoodGrid = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredFoods.map((food) => (
-            <RestaurantCard
-              key={food.id}
-              name={food.name}
-              cuisine={food.restaurant}
-              rating={4.5} // Placeholder
-              deliveryTime="20-30 min" // Placeholder
-              deliveryFee={0} // Placeholder
-              image={food.image}
-              description={`${food.description} - ${food.price} ETB`}
-            />
-          ))}
+          {isRestaurantView ? (
+            filteredRestaurants.map((restaurant) => (
+              <RestaurantCard
+                key={restaurant.name}
+                name={restaurant.name}
+                cuisine={restaurant.cuisine}
+                rating={restaurant.rating}
+                deliveryTime={restaurant.deliveryTime}
+                deliveryFee={restaurant.deliveryFee}
+                image={restaurant.image}
+                description={restaurant.description}
+                price={0} // Not applicable for restaurants
+                foods={restaurant.foods}
+              />
+            ))
+          ) : (
+            filteredFoods.map((food) => (
+              <RestaurantCard
+                key={food.id}
+                name={food.name}
+                cuisine={food.restaurant}
+                rating={4.5} // Placeholder
+                deliveryTime="20-30 min" // Placeholder
+                deliveryFee={0} // Placeholder
+                image={food.image}
+                description={food.description}
+                price={food.price}
+              />
+            ))
+          )}
         </div>
       </div>
     </section>
