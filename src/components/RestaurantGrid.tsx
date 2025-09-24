@@ -37,11 +37,11 @@ import ultimateDoubleBurgerImg from "/food and drinks/ultimate double burger.jpg
 const FoodGrid = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const foods = [
-    // Habesha 2000 - Ethiopian Restaurant
+    // Dereje Kurt Bet - Ethiopian Meat & Injera Restaurant
     {
       id: 1,
       name: "Doro Wat",
-      restaurant: "Habesha 2000",
+      restaurant: "Dereje Kurt Bet",
       price: 500,
       image: doroImg,
       description: "Spicy Ethiopian chicken stew with berbere spice and injera."
@@ -49,7 +49,7 @@ const FoodGrid = () => {
     {
       id: 2,
       name: "Kitfo",
-      restaurant: "Habesha 2000",
+      restaurant: "Dereje Kurt Bet",
       price: 600,
       image: kitfoImg,
       description: "Minced beef tartare seasoned with mitmita and served with injera."
@@ -57,390 +57,390 @@ const FoodGrid = () => {
     {
       id: 3,
       name: "Agelgil Tibs",
-      restaurant: "Habesha 2000",
+      restaurant: "Dereje Kurt Bet",
       price: 450,
       image: agelgilImg,
       description: "Lamb cubes sautéed with onions, garlic, and rosemary."
     },
     {
       id: 4,
-      name: "Atakilt Wat",
-      restaurant: "Habesha 2000",
-      price: 350,
-      image: atakiltImg,
-      description: "Mixed vegetable stew with cabbage, carrots, and potatoes."
-    },
-    {
-      id: 5,
       name: "Aynet Tibs",
-      restaurant: "Habesha 2000",
+      restaurant: "Dereje Kurt Bet",
       price: 480,
       image: aynetImg,
       description: "Beef cubes cooked with onions, tomatoes, and green peppers."
     },
     {
-      id: 6,
-      name: "Nigus Wat",
-      restaurant: "Habesha 2000",
-      price: 400,
-      image: nigusImg,
-      description: "Lentil stew with berbere spice and served with injera."
-    },
-    {
-      id: 7,
-      name: "Shiro Wat",
-      restaurant: "Habesha 2000",
-      price: 320,
-      image: shiroImg,
-      description: "Chickpea flour stew with onions and berbere spice."
-    },
-    {
-      id: 8,
+      id: 5,
       name: "Tibs Firfir",
-      restaurant: "Habesha 2000",
+      restaurant: "Dereje Kurt Bet",
       price: 420,
       image: agelgilImg,
       description: "Shredded beef with injera pieces in spicy sauce."
     },
     {
-      id: 9,
+      id: 6,
       name: "Dullet",
-      restaurant: "Habesha 2000",
+      restaurant: "Dereje Kurt Bet",
       price: 380,
       image: atakiltImg,
       description: "Tripe stew with onions and berbere spice."
     },
     {
-      id: 10,
+      id: 7,
       name: "Beyainatu",
-      restaurant: "Habesha 2000",
+      restaurant: "Dereje Kurt Bet",
       price: 550,
       image: doroImg,
       description: "Mixed platter of Ethiopian delicacies."
     },
-    // Mama's Kitchen - Italian Restaurant
+    {
+      id: 8,
+      name: "Injera",
+      restaurant: "Dereje Kurt Bet",
+      price: 50,
+      image: atakiltImg,
+      description: "Traditional Ethiopian flatbread."
+    },
+    {
+      id: 9,
+      name: "Tegelese Tibs",
+      restaurant: "Dereje Kurt Bet",
+      price: 460,
+      image: nigusImg,
+      description: "Lean beef sautéed with onions and spices."
+    },
+    {
+      id: 10,
+      name: "Kurt",
+      restaurant: "Dereje Kurt Bet",
+      price: 520,
+      image: shiroImg,
+      description: "Spiced ground meat stew."
+    },
+    // Simple Bistro - Burgers & Pizza
     {
       id: 11,
+      name: "Classic Burger",
+      restaurant: "Simple Bistro",
+      price: 300,
+      image: ultimateDoubleBurgerImg,
+      description: "Juicy beef patty with lettuce, tomato, and special sauce."
+    },
+    {
+      id: 12,
+      name: "Cheese Burger",
+      restaurant: "Simple Bistro",
+      price: 350,
+      image: cheeseBurgerImg,
+      description: "Classic burger with melted cheese."
+    },
+    {
+      id: 13,
       name: "Margherita Pizza",
-      restaurant: "Mama's Kitchen",
+      restaurant: "Simple Bistro",
       price: 400,
       image: bigPizzaImg,
       description: "Classic pizza with tomato sauce, mozzarella, and fresh basil."
     },
     {
-      id: 12,
+      id: 14,
       name: "Pepperoni Pizza",
-      restaurant: "Mama's Kitchen",
+      restaurant: "Simple Bistro",
       price: 450,
       image: pepperoniPizzaImg,
       description: "Pizza topped with pepperoni, cheese, and Italian herbs."
     },
     {
-      id: 13,
-      name: "Carbonara Pasta",
-      restaurant: "Mama's Kitchen",
-      price: 380,
-      image: carbonaraPastaImg,
-      description: "Creamy pasta with pancetta, eggs, and parmesan."
-    },
-    {
-      id: 14,
-      name: "Lasagna",
-      restaurant: "Mama's Kitchen",
-      price: 420,
-      image: lasagnaImg,
-      description: "Layered pasta with meat sauce and cheese."
-    },
-    {
       id: 15,
-      name: "Risotto",
-      restaurant: "Mama's Kitchen",
-      price: 360,
-      image: risottoImg,
-      description: "Creamy rice dish with mushrooms and parmesan."
+      name: "Chicken Burger",
+      restaurant: "Simple Bistro",
+      price: 320,
+      image: tunaBurgerImg,
+      description: "Grilled chicken patty with fresh vegetables."
     },
     {
       id: 16,
-      name: "Tiramisu",
-      restaurant: "Mama's Kitchen",
-      price: 250,
-      image: simpleBistroImg,
-      description: "Classic Italian dessert with coffee and mascarpone."
-    },
-    {
-      id: 17,
-      name: "Gelato",
-      restaurant: "Mama's Kitchen",
-      price: 150,
-      image: gelatoImg,
-      description: "Italian ice cream in various flavors."
-    },
-    {
-      id: 18,
-      name: "Caprese Salad",
-      restaurant: "Mama's Kitchen",
-      price: 280,
-      image: capreseSaladImg,
-      description: "Tomato, mozzarella, and basil salad."
-    },
-    {
-      id: 19,
-      name: "Osso Buco",
-      restaurant: "Mama's Kitchen",
-      price: 550,
-      image: ossoBucoImg,
-      description: "Braised veal shanks with vegetables."
-    },
-    {
-      id: 20,
-      name: "Panna Cotta",
-      restaurant: "Mama's Kitchen",
-      price: 220,
-      image: specialSimpleBistroImg,
-      description: "Creamy custard dessert with berry sauce."
-    },
-    // Burger King Addis - Burger Restaurant
-    {
-      id: 21,
-      name: "Whopper",
-      restaurant: "Burger King Addis",
-      price: 350,
-      image: ultimateDoubleBurgerImg,
-      description: "Flame-grilled beef patty with lettuce, tomato, and mayo."
-    },
-    {
-      id: 22,
-      name: "Cheeseburger",
-      restaurant: "Burger King Addis",
-      price: 380,
-      image: cheeseBurgerImg,
-      description: "Whopper with American cheese."
-    },
-    {
-      id: 23,
-      name: "Chicken Royale",
-      restaurant: "Burger King Addis",
-      price: 340,
-      image: normalSandwichImg,
-      description: "Crispy chicken breast with lettuce and mayo."
-    },
-    {
-      id: 24,
       name: "Veggie Burger",
-      restaurant: "Burger King Addis",
-      price: 320,
+      restaurant: "Simple Bistro",
+      price: 280,
       image: tunaBurgerImg,
       description: "Plant-based patty with fresh vegetables."
     },
     {
-      id: 25,
-      name: "Big King",
-      restaurant: "Burger King Addis",
-      price: 420,
-      image: ultimateDoubleBurgerImg,
-      description: "Two flame-grilled beef patties with cheese."
-    },
-    {
-      id: 26,
-      name: "Onion Rings",
-      restaurant: "Burger King Addis",
-      price: 180,
-      image: simpleBistroImg,
-      description: "Crispy battered onion rings."
-    },
-    {
-      id: 27,
-      name: "Fries",
-      restaurant: "Burger King Addis",
-      price: 120,
-      image: specialSimpleBistroImg,
-      description: "Golden crispy french fries."
-    },
-    {
-      id: 28,
-      name: "Chicken Nuggets",
-      restaurant: "Burger King Addis",
-      price: 250,
-      image: simpleBistroImg,
-      description: "Crispy chicken nuggets with dipping sauce."
-    },
-    {
-      id: 29,
-      name: "Milkshake",
-      restaurant: "Burger King Addis",
-      price: 150,
-      image: gelatoImg,
-      description: "Thick and creamy milkshake."
-    },
-    {
-      id: 30,
-      name: "Apple Pie",
-      restaurant: "Burger King Addis",
-      price: 100,
-      image: specialSimpleBistroImg,
-      description: "Warm apple pie with cinnamon."
-    },
-    // KFC Addis Ababa - Fried Chicken
-    {
-      id: 31,
-      name: "Original Recipe Chicken",
-      restaurant: "KFC Addis Ababa",
-      price: 280,
-      image: normalSandwichImg,
-      description: "Colonel's secret recipe fried chicken."
-    },
-    {
-      id: 32,
-      name: "Hot Wings",
-      restaurant: "KFC Addis Ababa",
-      price: 320,
-      image: simpleBistroImg,
-      description: "Spicy chicken wings with hot sauce."
-    },
-    {
-      id: 33,
-      name: "Chicken Bucket",
-      restaurant: "KFC Addis Ababa",
-      price: 450,
-      image: normalSandwichImg,
-      description: "Bucket of 8 pieces fried chicken."
-    },
-    {
-      id: 34,
-      name: "Zinger Burger",
-      restaurant: "KFC Addis Ababa",
-      price: 300,
-      image: tunaBurgerImg,
-      description: "Spicy chicken burger with lettuce and mayo."
-    },
-    {
-      id: 35,
-      name: "Popcorn Chicken",
-      restaurant: "KFC Addis Ababa",
-      price: 220,
-      image: simpleBistroImg,
-      description: "Bite-sized crispy chicken pieces."
-    },
-    {
-      id: 36,
-      name: "Mashed Potatoes",
-      restaurant: "KFC Addis Ababa",
-      price: 100,
-      image: specialSimpleBistroImg,
-      description: "Creamy mashed potatoes with gravy."
-    },
-    {
-      id: 37,
-      name: "Coleslaw",
-      restaurant: "KFC Addis Ababa",
-      price: 80,
-      image: capreseSaladImg,
-      description: "Creamy cabbage and carrot salad."
-    },
-    {
-      id: 38,
-      name: "Biscuits",
-      restaurant: "KFC Addis Ababa",
-      price: 60,
-      image: simpleBistroImg,
-      description: "Fluffy buttermilk biscuits."
-    },
-    {
-      id: 39,
-      name: "Mac & Cheese",
-      restaurant: "KFC Addis Ababa",
-      price: 150,
-      image: specialSimpleBistroImg,
-      description: "Creamy macaroni and cheese."
-    },
-    {
-      id: 40,
-      name: "Chocolate Chip Cookie",
-      restaurant: "KFC Addis Ababa",
-      price: 50,
-      image: specialSimpleBistroImg,
-      description: "Soft chocolate chip cookie."
-    },
-    // Pizza Hut Addis - Pizza Restaurant
-    {
-      id: 41,
+      id: 17,
       name: "Supreme Pizza",
-      restaurant: "Pizza Hut Addis",
+      restaurant: "Simple Bistro",
       price: 480,
-      image: bigPizzaImg,
+      image: stuffedCrustPizzaImg,
       description: "Pizza with pepperoni, sausage, bell peppers, and onions."
     },
     {
-      id: 42,
+      id: 18,
       name: "Hawaiian Pizza",
-      restaurant: "Pizza Hut Addis",
+      restaurant: "Simple Bistro",
       price: 460,
       image: greenPizzaImg,
       description: "Pizza with ham, pineapple, and cheese."
     },
     {
-      id: 43,
+      id: 19,
+      name: "Double Burger",
+      restaurant: "Simple Bistro",
+      price: 420,
+      image: ultimateDoubleBurgerImg,
+      description: "Two flame-grilled beef patties with cheese."
+    },
+    {
+      id: 20,
       name: "BBQ Chicken Pizza",
-      restaurant: "Pizza Hut Addis",
+      restaurant: "Simple Bistro",
       price: 500,
       image: stuffedCrustPizzaImg,
       description: "Pizza with BBQ chicken, red onions, and cilantro."
     },
+    // Amrogn Chicken - Burgers, Pizza & Sandwiches
+    {
+      id: 21,
+      name: "Chicken Burger",
+      restaurant: "Amrogn Chicken",
+      price: 320,
+      image: tunaBurgerImg,
+      description: "Grilled chicken patty with fresh vegetables and mayo."
+    },
+    {
+      id: 22,
+      name: "Beef Burger",
+      restaurant: "Amrogn Chicken",
+      price: 350,
+      image: ultimateDoubleBurgerImg,
+      description: "Juicy beef patty with lettuce, tomato, and special sauce."
+    },
+    {
+      id: 23,
+      name: "Cheese Burger",
+      restaurant: "Amrogn Chicken",
+      price: 380,
+      image: cheeseBurgerImg,
+      description: "Classic burger with melted cheese."
+    },
+    {
+      id: 24,
+      name: "Margherita Pizza",
+      restaurant: "Amrogn Chicken",
+      price: 400,
+      image: bigPizzaImg,
+      description: "Classic pizza with tomato sauce, mozzarella, and fresh basil."
+    },
+    {
+      id: 25,
+      name: "Pepperoni Pizza",
+      restaurant: "Amrogn Chicken",
+      price: 450,
+      image: pepperoniPizzaImg,
+      description: "Pizza topped with pepperoni, cheese, and Italian herbs."
+    },
+    {
+      id: 26,
+      name: "Chicken Sandwich",
+      restaurant: "Amrogn Chicken",
+      price: 300,
+      image: normalSandwichImg,
+      description: "Crispy chicken breast sandwich with lettuce and mayo."
+    },
+    {
+      id: 27,
+      name: "Tuna Sandwich",
+      restaurant: "Amrogn Chicken",
+      price: 280,
+      image: tunaSandwichImg,
+      description: "Tuna salad sandwich with fresh vegetables."
+    },
+    {
+      id: 28,
+      name: "Club Sandwich",
+      restaurant: "Amrogn Chicken",
+      price: 350,
+      image: normalSandwichImg,
+      description: "Triple decker sandwich with chicken, bacon, and veggies."
+    },
+    {
+      id: 29,
+      name: "Supreme Pizza",
+      restaurant: "Amrogn Chicken",
+      price: 480,
+      image: stuffedCrustPizzaImg,
+      description: "Pizza with pepperoni, sausage, bell peppers, and onions."
+    },
+    {
+      id: 30,
+      name: "Double Burger",
+      restaurant: "Amrogn Chicken",
+      price: 420,
+      image: ultimateDoubleBurgerImg,
+      description: "Two flame-grilled beef patties with cheese."
+    },
+    // Skylight Hotel - Fancy Burgers & Pizza
+    {
+      id: 31,
+      name: "Truffle Burger",
+      restaurant: "Skylight Hotel",
+      price: 550,
+      image: ultimateDoubleBurgerImg,
+      description: "Premium beef patty with truffle aioli, gourmet toppings."
+    },
+    {
+      id: 32,
+      name: "Wagyu Burger",
+      restaurant: "Skylight Hotel",
+      price: 650,
+      image: cheeseBurgerImg,
+      description: "Premium wagyu beef patty with special sauce."
+    },
+    {
+      id: 33,
+      name: "Lobster Burger",
+      restaurant: "Skylight Hotel",
+      price: 600,
+      image: tunaBurgerImg,
+      description: "Fresh lobster patty with premium ingredients."
+    },
+    {
+      id: 34,
+      name: "Gourmet Pizza",
+      restaurant: "Skylight Hotel",
+      price: 520,
+      image: bigPizzaImg,
+      description: "Artisanal pizza with premium ingredients."
+    },
+    {
+      id: 35,
+      name: "Truffle Pizza",
+      restaurant: "Skylight Hotel",
+      price: 580,
+      image: pepperoniPizzaImg,
+      description: "Pizza topped with truffle oil and premium cheeses."
+    },
+    {
+      id: 36,
+      name: "Seafood Pizza",
+      restaurant: "Skylight Hotel",
+      price: 600,
+      image: stuffedCrustPizzaImg,
+      description: "Pizza with fresh seafood and herbs."
+    },
+    {
+      id: 37,
+      name: "Foie Gras Pizza",
+      restaurant: "Skylight Hotel",
+      price: 650,
+      image: greenPizzaImg,
+      description: "Luxury pizza with foie gras and truffle."
+    },
+    {
+      id: 38,
+      name: "Caviar Pizza",
+      restaurant: "Skylight Hotel",
+      price: 700,
+      image: stuffedCrustPizzaImg,
+      description: "Premium pizza topped with caviar."
+    },
+    {
+      id: 39,
+      name: "Gold Leaf Burger",
+      restaurant: "Skylight Hotel",
+      price: 750,
+      image: ultimateDoubleBurgerImg,
+      description: "Luxury burger with edible gold leaf."
+    },
+    {
+      id: 40,
+      name: "Diamond Pizza",
+      restaurant: "Skylight Hotel",
+      price: 800,
+      image: greenPizzaImg,
+      description: "Exclusive pizza with diamond dust garnish."
+    },
+    // Fegegta Burger - Burgers, Pizza, Burritos & Sandwiches
+    {
+      id: 41,
+      name: "Classic Burger",
+      restaurant: "Fegegta Burger",
+      price: 300,
+      image: ultimateDoubleBurgerImg,
+      description: "Juicy beef patty with lettuce, tomato, and special sauce."
+    },
+    {
+      id: 42,
+      name: "Cheese Burger",
+      restaurant: "Fegegta Burger",
+      price: 350,
+      image: cheeseBurgerImg,
+      description: "Classic burger with melted cheese."
+    },
+    {
+      id: 43,
+      name: "Chicken Burger",
+      restaurant: "Fegegta Burger",
+      price: 320,
+      image: tunaBurgerImg,
+      description: "Grilled chicken patty with fresh vegetables."
+    },
     {
       id: 44,
-      name: "Veggie Lover's Pizza",
-      restaurant: "Pizza Hut Addis",
-      price: 420,
-      image: greenPizzaImg,
-      description: "Pizza loaded with fresh vegetables."
+      name: "Margherita Pizza",
+      restaurant: "Fegegta Burger",
+      price: 400,
+      image: bigPizzaImg,
+      description: "Classic pizza with tomato sauce, mozzarella, and fresh basil."
     },
     {
       id: 45,
-      name: "Meat Lover's Pizza",
-      restaurant: "Pizza Hut Addis",
-      price: 520,
+      name: "Pepperoni Pizza",
+      restaurant: "Fegegta Burger",
+      price: 450,
       image: pepperoniPizzaImg,
-      description: "Pizza with multiple meats: pepperoni, sausage, ham, and bacon."
+      description: "Pizza topped with pepperoni, cheese, and Italian herbs."
     },
     {
       id: 46,
-      name: "Garlic Bread",
-      restaurant: "Pizza Hut Addis",
-      price: 120,
-      image: simpleBistroImg,
-      description: "Toasted bread with garlic butter and herbs."
+      name: "Beef Burrito",
+      restaurant: "Fegegta Burger",
+      price: 400,
+      image: bigBorritoImg,
+      description: "Large burrito filled with seasoned beef, rice, and beans."
     },
     {
       id: 47,
-      name: "Chicken Wings",
-      restaurant: "Pizza Hut Addis",
-      price: 280,
-      image: simpleBistroImg,
-      description: "Buffalo style chicken wings."
+      name: "Chicken Burrito",
+      restaurant: "Fegegta Burger",
+      price: 380,
+      image: normalBorritoImg,
+      description: "Burrito with grilled chicken, salsa, and cheese."
     },
     {
       id: 48,
-      name: "Pasta",
-      restaurant: "Pizza Hut Addis",
+      name: "Club Sandwich",
+      restaurant: "Fegegta Burger",
       price: 350,
-      image: carbonaraPastaImg,
-      description: "Creamy pasta with choice of sauce."
+      image: normalSandwichImg,
+      description: "Triple decker sandwich with chicken, bacon, and veggies."
     },
     {
       id: 49,
-      name: "Breadsticks",
-      restaurant: "Pizza Hut Addis",
-      price: 100,
-      image: specialSimpleBistroImg,
-      description: "Soft breadsticks with marinara sauce."
+      name: "Tuna Sandwich",
+      restaurant: "Fegegta Burger",
+      price: 280,
+      image: tunaSandwichImg,
+      description: "Tuna salad sandwich with fresh vegetables."
     },
     {
       id: 50,
-      name: "Chocolate Lava Cake",
-      restaurant: "Pizza Hut Addis",
-      price: 150,
-      image: specialSimpleBistroImg,
-      description: "Warm chocolate cake with molten center."
+      name: "Supreme Pizza",
+      restaurant: "Fegegta Burger",
+      price: 480,
+      image: stuffedCrustPizzaImg,
+      description: "Pizza with pepperoni, sausage, bell peppers, and onions."
     },
     // Drinks from various restaurants
     {
