@@ -226,76 +226,76 @@ class FoodSeeder extends Seeder
                 'image' => '/food and drinks/ultimate double burger.jpg',
                 'description' => 'Two flame-grilled beef patties with cheese.'
             ],
-            // Skylight - Fancy Burgers & Pizza
+            // Dereje Kurt bet - Ethiopian Cuisine
             [
-                'name' => 'Truffle Burger',
-                'restaurant' => 'Skylight',
+                'name' => 'Doro Wat',
+                'restaurant' => 'Dereje Kurt bet',
                 'price' => 550,
-                'image' => '/food and drinks/ultimate double burger.jpg',
-                'description' => 'Premium beef patty with truffle aioli, gourmet toppings.'
+                'image' => '/food and drinks/doro.jpg',
+                'description' => 'Spicy chicken stew with berbere spice, served with injera.'
             ],
             [
-                'name' => 'Wagyu Burger',
-                'restaurant' => 'Skylight',
+                'name' => 'Kitfo',
+                'restaurant' => 'Dereje Kurt bet',
                 'price' => 600,
-                'image' => '/food and drinks/cheese burger.jpg',
-                'description' => 'Premium wagyu beef patty with special sauce.'
+                'image' => '/food and drinks/kitfo.jpg',
+                'description' => 'Minced beef tartare with spiced butter and mitmita.'
             ],
             [
-                'name' => 'Lobster Burger',
-                'restaurant' => 'Skylight',
+                'name' => 'Tibs',
+                'restaurant' => 'Dereje Kurt bet',
                 'price' => 580,
-                'image' => '/food and drinks/tuna burger.jpg',
-                'description' => 'Fresh lobster patty with premium ingredients.'
+                'image' => '/food and drinks/aynet.jpg',
+                'description' => 'Sautéed beef or lamb with onions and peppers.'
             ],
             [
-                'name' => 'Gourmet Pizza',
-                'restaurant' => 'Skylight',
+                'name' => 'Injera with Shiro',
+                'restaurant' => 'Dereje Kurt bet',
                 'price' => 520,
-                'image' => '/food and drinks/big pizza.jpg',
-                'description' => 'Artisanal pizza with premium ingredients.'
+                'image' => '/food and drinks/shiro.jpg',
+                'description' => 'Spiced chickpea stew served with injera.'
             ],
             [
-                'name' => 'Truffle Pizza',
-                'restaurant' => 'Skylight',
+                'name' => 'Beyainatu',
+                'restaurant' => 'Dereje Kurt bet',
                 'price' => 560,
-                'image' => '/food and drinks/pepperoni pizza.avif',
-                'description' => 'Pizza topped with truffle oil and premium cheeses.'
+                'image' => '/food and drinks/agelgil.jpg',
+                'description' => 'Mixed vegetable stew with lentils and cabbage.'
             ],
             [
-                'name' => 'Seafood Pizza',
-                'restaurant' => 'Skylight',
+                'name' => 'Zilzil Tibs',
+                'restaurant' => 'Dereje Kurt bet',
                 'price' => 590,
-                'image' => '/food and drinks/stuffed crust pizza.jpg',
-                'description' => 'Pizza with fresh seafood and herbs.'
+                'image' => '/food%20and%20drinks/dereje%20kitfo/zizlil%20tibs.jpg',
+                'description' => 'Crispy beef tibs with rosemary and garlic.'
             ],
             [
-                'name' => 'Foie Gras Pizza',
-                'restaurant' => 'Skylight',
+                'name' => 'Dullet',
+                'restaurant' => 'Dereje Kurt bet',
                 'price' => 600,
-                'image' => '/food and drinks/green pizza.jpg',
-                'description' => 'Luxury pizza with foie gras and truffle.'
+                'image' => '/food%20and%20drinks/dereje%20kitfo/dulet.jpg',
+                'description' => 'Spicy tripe stew with onions and peppers.'
             ],
             [
-                'name' => 'Caviar Pizza',
-                'restaurant' => 'Skylight',
+                'name' => 'Genfo',
+                'restaurant' => 'Dereje Kurt bet',
                 'price' => 600,
-                'image' => '/food and drinks/stuffed crust pizza.jpg',
-                'description' => 'Premium pizza topped with caviar.'
+                'image' => '/food%20and%20drinks/dereje%20kitfo/genfo.jpg',
+                'description' => 'Porridge made from barley flour with spiced butter.'
             ],
             [
-                'name' => 'Gold Leaf Burger',
-                'restaurant' => 'Skylight',
+                'name' => 'Bozena Shiro',
+                'restaurant' => 'Dereje Kurt bet',
                 'price' => 600,
-                'image' => '/food and drinks/ultimate double burger.jpg',
-                'description' => 'Luxury burger with edible gold leaf.'
+                'image' => '/food%20and%20drinks/shiro.jpg',
+                'description' => 'Thick chickpea stew with collard greens.'
             ],
             [
-                'name' => 'Diamond Pizza',
-                'restaurant' => 'Skylight',
+                'name' => 'Firfir',
+                'restaurant' => 'Dereje Kurt bet',
                 'price' => 600,
-                'image' => '/food and drinks/green pizza.jpg',
-                'description' => 'Exclusive pizza with diamond dust garnish.'
+                'image' => '/food%20and%20drinks/dereje%20kitfo/firfir.webp',
+                'description' => 'Shredded injera mixed with berbere sauce.'
             ],
             // Fegegta - Burgers, Pizza, Burritos & Sandwiches
             [

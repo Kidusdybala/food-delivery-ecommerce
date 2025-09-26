@@ -35,6 +35,7 @@ const RestaurantCard = ({
 }: RestaurantCardProps) => {
   const [selectedDrink, setSelectedDrink] = useState<string | null>(null);
   const isRestaurant = foods && foods.length > 0;
+  console.log(`Rendering RestaurantCard for ${name}, image: ${image}`);
 
   return (
     <Dialog>
@@ -45,6 +46,7 @@ const RestaurantCard = ({
               src={image}
               alt={name}
               className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+              onError={(e) => console.error(`Failed to load image for ${name}: ${image}`, e)}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 

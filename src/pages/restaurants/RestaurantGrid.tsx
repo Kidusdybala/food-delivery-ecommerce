@@ -9,17 +9,19 @@ interface FoodGridProps {
 }
 
 const FoodGrid = ({ filter = 'all' }: FoodGridProps) => {
+  console.log('FoodGrid rendering with filter:', filter);
   const [searchTerm, setSearchTerm] = useState("");
 
   // Get unique restaurants
   const restaurants = Array.from(new Set(foods.map(food => food.restaurant))).map(restaurantName => {
     const restaurantFoods = foods.filter(food => food.restaurant === restaurantName);
-    let restaurantImage = '/food and drinks/restorants/simple.jpg'; // default
-    if (restaurantName === 'Hilton') restaurantImage = '/food and drinks/restorants/hilton.webp';
-    else if (restaurantName === 'Simple Bistro') restaurantImage = '/food and drinks/restorants/simple.jpg';
-    else if (restaurantName === 'Amrogn Chicken') restaurantImage = '/food and drinks/restorants/amrogn chiken.png';
-    else if (restaurantName === 'Skylight') restaurantImage = '/food and drinks/restorants/dereje kurt.jpg';
-    else if (restaurantName === 'Fegegta') restaurantImage = '/food and drinks/restorants/fegegta burger.jpg';
+    let restaurantImage = '/food%20and%20drinks/restorants/simple.jpg'; // default
+    if (restaurantName === 'Hilton') restaurantImage = '/food%20and%20drinks/restorants/hilton.webp';
+    else if (restaurantName === 'Simple Bistro') restaurantImage = '/food%20and%20drinks/restorants/simple.jpg';
+    else if (restaurantName === 'Amrogn Chicken') restaurantImage = '/food%20and%20drinks/restorants/amrogn%20chiken.png';
+    else if (restaurantName === 'Dereje Kurt bet') restaurantImage = '/food%20and%20drinks/restorants/dereje%20kurt.jpg';
+    else if (restaurantName === 'Fegegta') restaurantImage = '/food%20and%20drinks/restorants/fegegta%20burger.jpg';
+    console.log(`Restaurant: ${restaurantName}, Image: ${restaurantImage}`);
     return {
       name: restaurantName,
       cuisine: 'Various',

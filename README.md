@@ -29,7 +29,7 @@ A modern food delivery application built with React, TypeScript, and Vite. Featu
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd human-hair-ecommerce
+cd food-delivery-ecommerce
 ```
 
 2. Install dependencies:

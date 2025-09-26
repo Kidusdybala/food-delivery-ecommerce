@@ -6,11 +6,11 @@ import pepperoniPizzaImg from "/food and drinks/pepperoni pizza.avif";
 import stuffedCrustPizzaImg from "/food and drinks/stuffed crust pizza.jpg";
 import greenPizzaImg from "/food and drinks/green pizza.jpg";
 
-export const skylightFoods = [
+export const Dereje Kurt betFoods = [
   {
     id: 31,
     name: "Truffle Burger",
-    restaurant: "Skylight",
+    restaurant: "Dereje Kurt bet",
     price: 550,
     image: ultimateDoubleBurgerImg,
     description: "Premium beef patty with truffle aioli, gourmet toppings."
@@ -18,7 +18,7 @@ export const skylightFoods = [
   {
     id: 32,
     name: "Wagyu Burger",
-    restaurant: "Skylight",
+    restaurant: "Dereje Kurt bet",
     price: 650,
     image: cheeseBurgerImg,
     description: "Premium wagyu beef patty with special sauce."
@@ -26,7 +26,7 @@ export const skylightFoods = [
   {
     id: 33,
     name: "Lobster Burger",
-    restaurant: "Skylight",
+    restaurant: "Dereje Kurt bet",
     price: 600,
     image: tunaBurgerImg,
     description: "Fresh lobster patty with premium ingredients."
@@ -34,7 +34,7 @@ export const skylightFoods = [
   {
     id: 34,
     name: "Gourmet Pizza",
-    restaurant: "Skylight",
+    restaurant: "Dereje Kurt bet",
     price: 520,
     image: bigPizzaImg,
     description: "Artisanal pizza with premium ingredients."
@@ -42,7 +42,7 @@ export const skylightFoods = [
   {
     id: 35,
     name: "Truffle Pizza",
-    restaurant: "Skylight",
+    restaurant: "Dereje Kurt bet",
     price: 580,
     image: pepperoniPizzaImg,
     description: "Pizza topped with truffle oil and premium cheeses."
@@ -50,7 +50,7 @@ export const skylightFoods = [
   {
     id: 36,
     name: "Seafood Pizza",
-    restaurant: "Skylight",
+    restaurant: "Dereje Kurt bet",
     price: 600,
     image: stuffedCrustPizzaImg,
     description: "Pizza with fresh seafood and herbs."
@@ -58,7 +58,7 @@ export const skylightFoods = [
   {
     id: 37,
     name: "Foie Gras Pizza",
-    restaurant: "Skylight",
+    restaurant: "Dereje Kurt bet",
     price: 650,
     image: greenPizzaImg,
     description: "Luxury pizza with foie gras and truffle."
@@ -66,7 +66,7 @@ export const skylightFoods = [
   {
     id: 38,
     name: "Caviar Pizza",
-    restaurant: "Skylight",
+    restaurant: "Dereje Kurt bet",
     price: 700,
     image: stuffedCrustPizzaImg,
     description: "Premium pizza topped with caviar."
@@ -74,7 +74,7 @@ export const skylightFoods = [
   {
     id: 39,
     name: "Gold Leaf Burger",
-    restaurant: "Skylight",
+    restaurant: "Dereje Kurt bet",
     price: 750,
     image: ultimateDoubleBurgerImg,
     description: "Luxury burger with edible gold leaf."
@@ -82,7 +82,7 @@ export const skylightFoods = [
   {
     id: 40,
     name: "Diamond Pizza",
-    restaurant: "Skylight",
+    restaurant: "Dereje Kurt bet",
     price: 800,
     image: greenPizzaImg,
     description: "Exclusive pizza with diamond dust garnish."

@@ -1,7 +1,7 @@
 import { hiltonFoods } from "./hiltonFoods";
 import { simpleBistroFoods } from "./simpleBistroFoods";
 import { amrognChickenFoods } from "./amrognChickenFoods";
-import { skylightFoods } from "./skylightFoods";
+import { Dereje Kurt betFoods } from "./Dereje Kurt betFoods";
 import { fegegtaFoods } from "./fegegtaFoods";
 
 export interface Food {
@@ -17,6 +17,6 @@ export const foods: Food[] = [
   ...hiltonFoods,
   ...simpleBistroFoods,
   ...amrognChickenFoods,
-  ...skylightFoods,
+  ...Dereje Kurt betFoods,
   ...fegegtaFoods
 ];

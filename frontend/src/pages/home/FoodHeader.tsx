@@ -2,11 +2,13 @@ import { Button } from "@/components/ui/button";
 import { ShoppingCart, User, Search, MapPin, Moon, Sun } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { useTheme } from "@/contexts/ThemeContext";
+import { useCart } from "@/contexts/CartContext";
 
 const FoodHeader = () => {
   const location = useLocation();
   const currentPath = location.pathname;
   const { theme, toggleTheme } = useTheme();
+  const { getTotalItems } = useCart();
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -74,12 +76,16 @@ const FoodHeader = () => {
           <Button variant="ghost" size="icon">
             <User className="h-5 w-5" />
           </Button>
-          <Button variant="ghost" size="icon" className="relative">
-            <ShoppingCart className="h-5 w-5" />
-            <span className="absolute -top-2 -right-2 h-5 w-5 rounded-full bg-primary text-xs font-medium text-primary-foreground flex items-center justify-center">
-              0
-            </span>
-          </Button>
+          <Link to="/cart">
+            <Button variant="ghost" size="icon" className="relative">
+              <ShoppingCart className="h-5 w-5" />
+              {getTotalItems() > 0 && (
+                <span className="absolute -top-2 -right-2 h-5 w-5 rounded-full bg-primary text-xs font-medium text-primary-foreground flex items-center justify-center">
+                  {getTotalItems()}
+                </span>
+              )}
+            </Button>
+          </Link>
         </div>
       </div>
     </header>

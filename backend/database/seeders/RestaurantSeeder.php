@@ -41,7 +41,7 @@ class RestaurantSeeder extends Seeder
                 'description' => 'Specializing in chicken dishes and sandwiches'
             ],
             [
-                'name' => 'Skylight',
+                'name' => 'Dereje Kurt bet',
                 'cuisine' => 'Gourmet',
                 'rating' => 4.8,
                 'delivery_time' => '25-35 min',
