@@ -17,3 +17,4 @@ Route::apiResource('orders', OrderController::class);
 
 Route::post('/payment/initialize', [PaymentController::class, 'initializePayment']);
 Route::post('/payment/callback', [PaymentController::class, 'callback']);
+Route::get('/payment/verify', [PaymentController::class, 'verifyPayment']);

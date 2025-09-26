@@ -32,7 +32,10 @@ const MockCheckout = () => {
 
       // Redirect to success page after a short delay
       setTimeout(() => {
-        window.location.href = `/payment/success?tx_ref=${txRef}`;
+        // Ensure both status and tx_ref parameters are included
+        const successUrl = `/payment/success?status=success&tx_ref=${txRef}`;
+        console.log('Redirecting to:', successUrl);
+        window.location.href = successUrl;
       }, 1500);
 
     } catch (error) {
