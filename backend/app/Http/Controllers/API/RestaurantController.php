@@ -21,7 +21,18 @@ class RestaurantController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'cuisine' => 'required|string|max:255',
+            'rating' => 'required|numeric|min:0|max:5',
+            'delivery_time' => 'required|integer|min:0',
+            'delivery_fee' => 'required|numeric|min:0',
+            'image' => 'nullable|string',
+            'description' => 'nullable|string',
+        ]);
+
+        $restaurant = Restaurant::create($request->all());
+        return response()->json($restaurant, 201);
     }
 
     /**
@@ -29,7 +40,8 @@ class RestaurantController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $restaurant = Restaurant::findOrFail($id);
+        return response()->json($restaurant);
     }
 
     /**
@@ -37,7 +49,19 @@ class RestaurantController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            'name' => 'sometimes|required|string|max:255',
+            'cuisine' => 'sometimes|required|string|max:255',
+            'rating' => 'sometimes|required|numeric|min:0|max:5',
+            'delivery_time' => 'sometimes|required|integer|min:0',
+            'delivery_fee' => 'sometimes|required|numeric|min:0',
+            'image' => 'nullable|string',
+            'description' => 'nullable|string',
+        ]);
+
+        $restaurant = Restaurant::findOrFail($id);
+        $restaurant->update($request->all());
+        return response()->json($restaurant);
     }
 
     /**
@@ -45,6 +69,8 @@ class RestaurantController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $restaurant = Restaurant::findOrFail($id);
+        $restaurant->delete();
+        return response()->json(['message' => 'Restaurant deleted successfully']);
     }
 }

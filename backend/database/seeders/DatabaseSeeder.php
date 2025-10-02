@@ -22,6 +22,34 @@ class DatabaseSeeder extends Seeder
             ]
         );
 
+        // Create demo users
+        User::updateOrCreate(
+            ['email' => 'admin@foodieexpress.com'],
+            [
+                'name' => 'Admin User',
+                'password' => bcrypt('admin123'),
+                'role' => 'admin',
+            ]
+        );
+
+        User::updateOrCreate(
+            ['email' => 'client@foodieexpress.com'],
+            [
+                'name' => 'Client User',
+                'password' => bcrypt('client123'),
+                'role' => 'client',
+            ]
+        );
+
+        User::updateOrCreate(
+            ['email' => 'delivery@foodieexpress.com'],
+            [
+                'name' => 'Delivery User',
+                'password' => bcrypt('delivery123'),
+                'role' => 'delivery',
+            ]
+        );
+
         $this->call([
             FoodSeeder::class,
             RestaurantSeeder::class,

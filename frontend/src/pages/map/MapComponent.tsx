@@ -5,7 +5,19 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { MapPin, Navigation } from 'lucide-react';
 
-const MapComponent = () => {
+interface LocationMarker {
+  coords: [number, number];
+  name: string;
+  type: 'user' | 'restaurant' | 'delivery' | 'customer';
+}
+
+interface MapComponentProps {
+  locations?: LocationMarker[];
+  center?: [number, number];
+  zoom?: number;
+}
+
+const MapComponent = ({ locations = [], center, zoom = 12 }: MapComponentProps) => {
   const mapContainer = useRef<HTMLDivElement>(null);
   const map = useRef<mapboxgl.Map | null>(null);
   const [mapboxToken, setMapboxToken] = useState('');
@@ -56,8 +68,8 @@ const MapComponent = () => {
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
       style: 'mapbox://styles/mapbox/light-v11',
-      center: [-74.006, 40.7128], // NYC default
-      zoom: 12,
+      center: center || [-74.006, 40.7128], // NYC default
+      zoom: zoom,
     });
 
     // Add navigation controls
@@ -66,21 +78,20 @@ const MapComponent = () => {
       'top-right'
     );
 
-    // Add some sample restaurant markers
-    const sampleRestaurants = [
-      { name: "Mario's Pizzeria", coords: [-74.008, 40.715] as [number, number] },
-      { name: "Tokyo Sushi Bar", coords: [-74.004, 40.710] as [number, number] },
-      { name: "Burger Palace", coords: [-74.010, 40.708] as [number, number] }
-    ];
+    // Add location markers
+    locations.forEach(location => {
+      let color = '#22c55e'; // default green
+      if (location.type === 'user') color = '#ff6b35';
+      if (location.type === 'delivery') color = '#3b82f6';
+      if (location.type === 'customer') color = '#ef4444';
 
-    sampleRestaurants.forEach(restaurant => {
-      new mapboxgl.Marker({ color: '#22c55e' })
-        .setLngLat(restaurant.coords)
+      new mapboxgl.Marker({ color })
+        .setLngLat(location.coords)
         .setPopup(
           new mapboxgl.Popup().setHTML(
             `<div class="p-2">
-              <h3 class="font-semibold">${restaurant.name}</h3>
-              <p class="text-sm text-gray-600">Restaurant available for delivery</p>
+              <h3 class="font-semibold">${location.name}</h3>
+              <p class="text-sm text-gray-600">${location.type.charAt(0).toUpperCase() + location.type.slice(1)} Location</p>
             </div>`
           )
         )
@@ -90,7 +101,7 @@ const MapComponent = () => {
     return () => {
       map.current?.remove();
     };
-  }, [mapboxToken]);
+  }, [mapboxToken, locations, center, zoom]);
 
   if (!mapboxToken) {
     return (

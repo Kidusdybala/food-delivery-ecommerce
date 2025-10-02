@@ -21,7 +21,16 @@ class FoodController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'restaurant' => 'required|string|max:255',
+            'price' => 'required|numeric|min:0',
+            'image' => 'nullable|string',
+            'description' => 'nullable|string',
+        ]);
+
+        $food = Food::create($request->all());
+        return response()->json($food, 201);
     }
 
     /**
@@ -29,7 +38,8 @@ class FoodController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $food = Food::findOrFail($id);
+        return response()->json($food);
     }
 
     /**
@@ -37,7 +47,17 @@ class FoodController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            'name' => 'sometimes|required|string|max:255',
+            'restaurant' => 'sometimes|required|string|max:255',
+            'price' => 'sometimes|required|numeric|min:0',
+            'image' => 'nullable|string',
+            'description' => 'nullable|string',
+        ]);
+
+        $food = Food::findOrFail($id);
+        $food->update($request->all());
+        return response()->json($food);
     }
 
     /**
@@ -45,6 +65,8 @@ class FoodController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $food = Food::findOrFail($id);
+        $food->delete();
+        return response()->json(['message' => 'Food deleted successfully']);
     }
 }
